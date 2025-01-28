@@ -18,7 +18,7 @@ const Checker = () => {
 
     try {
       
-      const response = await fetch("http://localhost:5000/check", {
+      const response = await fetch("https://malicious-link-checker-backend.onrender.com/check", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
