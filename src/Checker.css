@@ -1,0 +1,64 @@
+.checker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    min-height: 100vh;
+    color: white;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .url-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    outline: none;
+  }
+  
+  .check-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .check-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .error-message {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .safe-result {
+    color: #4caf50;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .malicious-result {
+    color: #ff4d4d;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
