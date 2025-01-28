@@ -17,7 +17,6 @@ const Checker = () => {
     setIsMalicious(null);
 
     try {
-      
       const response = await fetch("https://malicious-link-checker-backend.onrender.com/check", {
         method: "POST",
         headers: {
@@ -29,7 +28,7 @@ const Checker = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setIsMalicious(data.isMalicious); 
+        setIsMalicious(data.isMalicious);
       } else {
         setError(data.error || "Failed to check the URL");
       }
@@ -56,9 +55,16 @@ const Checker = () => {
       {error && <p className="error-message">{error}</p>}
 
       {isMalicious !== null && (
-        <p className={isMalicious ? "malicious-result" : "safe-result"}>
-          {isMalicious ? "The link is malicious!" : "The link is safe."}
-        </p>
+        <div>
+          <p className={isMalicious ? "malicious-result" : "safe-result"}>
+            {isMalicious ? "The link is malicious!" : "The link is safe."}
+          </p>
+          {!isMalicious && (
+            <a href={url} target="_blank" rel="noopener noreferrer" className="open-link">
+              Open Link
+            </a>
+          )}
+        </div>
       )}
     </div>
   );
